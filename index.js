@@ -15,7 +15,7 @@ client.once('ready', () => {
 const targetUserIds = [
   '1373601932001677457', 
   '1388553603878228110',  
-  '345678901234567890'   
+  '1318270147387199569'   
 ];
 
 client.on('guildMemberAdd', async (member) => {
