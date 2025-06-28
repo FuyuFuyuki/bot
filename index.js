@@ -12,7 +12,7 @@ client.once('ready', () => {
   console.log(`🤖 Bot is online as ${client.user.tag}`);
 });
 
-// 🧑‍🤝‍🧑 Danh sách các User ID cần gán role
+// Danh sách các User ID
 const targetUserIds = [
   '1373601932001677457', // Người 1
   '234567890123456789',  // Người 2
