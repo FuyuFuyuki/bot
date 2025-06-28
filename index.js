@@ -12,11 +12,10 @@ client.once('ready', () => {
   console.log(`🤖 Bot is online as ${client.user.tag}`);
 });
 
-// Danh sách các User ID
 const targetUserIds = [
-  '1373601932001677457', // Người 1
-  '234567890123456789',  // Người 2
-  '345678901234567890'   // Người 3
+  '1373601932001677457', 
+  '1388553603878228110',  
+  '345678901234567890'   
 ];
 
 client.on('guildMemberAdd', async (member) => {
@@ -25,15 +24,15 @@ client.on('guildMemberAdd', async (member) => {
   if (targetUserIds.includes(member.user.id)) {
     const role = member.guild.roles.cache.get(process.env.ROLE_ID);
     if (!role) {
-      console.error('❌ Không tìm thấy role.');
+      console.error('❌ Role not found.');
       return;
     }
 
     try {
       await member.roles.add(role);
-      console.log(`✅ Đã gán role cho ${member.user.tag}`);
+      console.log(`✅ Role assigned to ${member.user.tag}`);
     } catch (err) {
-      console.error('❌ Lỗi khi gán role:', err);
+      console.error('❌ Error assigning role to:', err);
     }
   }
 });
